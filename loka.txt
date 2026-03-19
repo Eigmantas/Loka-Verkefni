@@ -1,0 +1,2 @@
+I am going to build a web about sneaker-shose it 
+will have barnd model color size and images of the sneaker 
