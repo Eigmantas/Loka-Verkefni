@@ -12,7 +12,7 @@ app.set('views', path.join(__dirname, 'src/views'));
 
 app.use(express.static(path.join(__dirname, 'src/public')));
 
-app.use('/sneakers', sneakerRoutes);
+app.use('/', sneakerRoutes);
 
 app.get('/', (req, res) => {
     res.render('index');
