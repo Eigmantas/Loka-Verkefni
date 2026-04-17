@@ -1,0 +1,22 @@
+<%- include('partials/header') %>
+
+<section class="sneaker-detail">
+    <div class="detail-card">
+        <div class="detail-image">
+            <img src="/<%= sneaker.image_url %>" alt="Sneaker <%= sneaker.id %>">
+        </div>
+        <div class="detail-info">
+            <span class="tag">Sneaker detail</span>
+            <h1>Model <%= sneaker.model_id %></h1>
+            <p class="sneaker-meta">Color <%= sneaker.color %> · Size <%= sneaker.size %></p>
+            <p class="sneaker-description">A clean street-ready sneaker with bold styling and modern comfort. Perfect for everyday wear or pairing with your favorite outfit.</p>
+            <div class="detail-actions">
+                <a href="/products" class="button button-secondary">Back to products</a>
+                <a href="#" class="button button-primary">Add to cart</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<%- include('partials/footer') %>
+

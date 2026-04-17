@@ -1,13 +1,13 @@
-@import 'variables';
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-}
-body{
-    background-color: $background-color;
-    color: $text-color;
-}
+$font-sans: 'Roboto', sans-serif;
+$background-color: #f4f6f8;
+$surface-color: #ffffff;
+$text-color: #1f2937;
+$muted-color: #64748b;
+$primary-color: #2563eb;
+$primary-strong: #1d4ed8;
+$accent-color: #ec4899;
+$border-color: rgba(15, 23, 42, 0.08);
+$border-radius: 20px;
+$shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+$max-width: 1200px;
+$section-spacing: 3.5rem;

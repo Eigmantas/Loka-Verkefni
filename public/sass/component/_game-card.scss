@@ -1,0 +1,27 @@
+.sneaker-card {
+  background: $surface-color;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  overflow: hidden;
+  box-shadow: $shadow;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.sneaker-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 32px 80px rgba(15, 23, 42, 0.12);
+}
+
+.sneaker-image {
+  padding: 2rem;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(180deg, rgba(37, 99, 235, 0.05), rgba(236, 72, 153, 0.05));
+}
+
+.sneaker-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+}

@@ -10,10 +10,13 @@
 <section class="featured-sneakers">
     <h2>Featured Sneakers</h2>
     <div class="sneaker-grid">
-        <div class="sneaker-card">
-        <div class="sneaker-image">
-            <img src="/images/sneaker1.jpg" alt="Sneaker 1">
-        </div>
+        <% sneakers.forEach(sneaker => { %>
+            <a href="/product/<%= sneaker.id %>" class="sneaker-card">
+                <div class="sneaker-image">
+                    <img src="/<%= sneaker.image_url %>" alt="Sneaker <%= sneaker.id %>">
+                </div>
+            </a>
+        <% }); %>
     </div>
 </section>
 
