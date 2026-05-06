@@ -17,7 +17,7 @@ const getHomePage = async (req, res) => {
 const getProductsPage = async (req, res) => {
     try {
         const sneakers = await sneakerService.getALLSneakers();
-        res.render('index', {
+        res.render('products', {
             title: 'Products - Sneaker Store',
             sneakers: sneakers
         });

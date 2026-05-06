@@ -1,0 +1,24 @@
+<%- include('partials/header')%>
+
+<section class="products-page">
+    <div class="products-header">
+        <h1>All Sneakers</h1>
+        <p><%= sneakers.length %> products available</p>
+    </div>
+    
+    <div class="sneaker-grid">
+        <% sneakers.forEach(sneaker => { %>
+            <a href="/product/<%= sneaker.id %>" class="sneaker-card">
+                <div class="sneaker-image">
+                    <img src="/<%= sneaker.image_url %>" alt="Sneaker <%= sneaker.id %>">
+                </div>
+                <div class="sneaker-info">
+                    <p class="sneaker-model">Model <%= sneaker.model_id %></p>
+                    <p class="sneaker-price">$<%= parseFloat(sneaker.price).toFixed(2) %></p>
+                </div>
+            </a>
+        <% }); %>
+    </div>
+</section>
+
+<%- include('partials/footer')%>

@@ -1,100 +1,90 @@
-@import 'variables';
-@import 'base/reset';
-@import 'component/game-card';
+@import 'variables', 'base/reset', 'component/game-card';
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   min-height: 100vh;
   background: $background-color;
   color: $text-color;
-  font-family: $font-sans;
-  font-size: 16px;
-  line-height: 1.6;
+  font: 16px/1.6 $font-sans;
 }
 
-img {
-  max-width: 100%;
-  display: block;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
+img { max-width: 100%; display: block; border-radius: 16px; }
+a { color: inherit; text-decoration: none; }
 
 header {
-  position: sticky;
-  top: 0;
-  z-index: 10;
+  position: sticky; top: 0; z-index: 10;
   background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(15, 23, 42, 0.06);
-}
-
-header nav {
-  max-width: $max-width;
-  margin: 0 auto;
-  padding: 1rem 1.5rem;
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-header nav a {
-  font-weight: 500;
-  transition: color 0.2s ease;
-}
-
-header nav a:hover {
-  color: $primary-color;
+  
+  nav {
+    max-width: $max-width; margin: 0 auto;
+    padding: 1rem 1.5rem; display: flex;
+    justify-content: space-between; align-items: center;
+    a { font-weight: 500; transition: color 0.2s; &:hover { color: $primary-color; }}
+  }
 }
 
 .store-section {
-  padding: 5rem 1.5rem;
-  background: linear-gradient(180deg, rgba(37, 99, 235, 0.08), transparent 75%);
-}
-
-.store-info {
-  max-width: 760px;
-  margin: 0 auto;
+  padding: 1.5rem; margin: 1rem;
+  background: rgba(59, 130, 246, 0.05); border-radius: 24px;
   text-align: center;
-}
-
-.store-info h1 {
-  font-size: clamp(2.5rem, 4vw, 4rem);
-  margin-bottom: 1rem;
-  color: $primary-strong;
-}
-
-.store-info p {
-  color: $muted-color;
-  font-size: 1.05rem;
+  h1 { font-size: clamp(1.5rem, 3vw, 2.5rem); color: $primary-color; margin-bottom: 0.5rem; }
+  p { color: $muted-color; max-width: 760px; margin: 0 auto; }
 }
 
 .featured-sneakers {
-  padding: 4rem 1.5rem 6rem;
-  max-width: $max-width;
-  margin: 0 auto;
-}
-
-.featured-sneakers h2 {
-  font-size: clamp(2rem, 3vw, 2.75rem);
-  margin-bottom: 1.75rem;
-  text-align: center;
+  padding: 1.5rem 1.5rem 2rem; max-width: $max-width; margin: 0 auto;
+  h2 { font-size: clamp(1.5rem, 2.5vw, 2rem); text-align: center; margin-bottom: 1rem; }
 }
 
 .sneaker-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+  display: grid; gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
-footer {
-  padding: 2rem 1.5rem;
-  text-align: center;
-  color: $muted-color;
+.products-page {
+  padding: 1.5rem 1.5rem 2rem; max-width: $max-width; margin: 0 auto;
 }
+
+.products-header {
+  text-align: center; margin-bottom: 1.5rem;
+  h1 { font-size: clamp(1.5rem, 3vw, 2.5rem); color: $primary-color; margin-bottom: 0.5rem; }
+  p { color: $muted-color; font-size: 0.95rem; }
+}
+
+.detail-card {
+  max-width: 900px; margin: 0 auto; padding: 1.5rem;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem; border-radius: 24px;
+  background: $surface-color; box-shadow: $shadow;
+}
+
+.detail-image {
+  padding: 1.5rem; background: #ffffff;
+  display: grid; place-items: center; border-radius: 20px;
+  img { width: 100%; border: 3px solid #d1d5db; object-fit: cover; }
+}
+
+.detail-info {
+  display: flex; flex-direction: column; justify-content: center; gap: 0.75rem;
+  h1 { font-size: clamp(1.5rem, 3vw, 2.5rem); margin: 0; }
+  .tag { 
+    align-self: start; padding: 0.5rem 1rem; border-radius: 20px;
+    background: rgba(244, 114, 182, 0.1); color: $accent-color;
+    font: 600 0.9rem sans-serif; text-transform: uppercase;
+  }
+}
+
+.button {
+  display: inline-flex; align-items: center; padding: 0.6rem 1rem;
+  border-radius: 16px; font: 600 0.9rem sans-serif;
+  transition: transform 0.2s;
+  &:hover { transform: translateY(-1px); }
+  &-primary { background: $primary-color; color: #fff; }
+  &-secondary { background: rgba(244, 114, 182, 0.1); color: $accent-color; }
+}
+
+footer { padding: 1.5rem; text-align: center; color: $muted-color; font-size: 0.9rem; }
